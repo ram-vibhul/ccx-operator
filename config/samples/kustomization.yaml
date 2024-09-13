@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- databases_v1_ccxdatabase.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,27 @@
+# permissions for end users to view ccxdatabases.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: ccxdatabase-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: ccx-operator
+    app.kubernetes.io/part-of: ccx-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ccxdatabase-viewer-role
+rules:
+- apiGroups:
+  - databases.s9s.io
+  resources:
+  - ccxdatabases
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - databases.s9s.io
+  resources:
+  - ccxdatabases/status
+  verbs:
+  - get

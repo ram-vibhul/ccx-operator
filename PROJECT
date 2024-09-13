@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: ccx-operator
 repo: s9s.io/ccx-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: s9s.io
+  group: databases
+  kind: CCXDatabase
+  path: s9s.io/ccx-operator/api/v1
+  version: v1
 version: "3"

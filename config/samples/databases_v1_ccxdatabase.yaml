@@ -1,0 +1,12 @@
+apiVersion: databases.s9s.io/v1
+kind: CCXDatabase
+metadata:
+  labels:
+    app.kubernetes.io/name: ccxdatabase
+    app.kubernetes.io/instance: ccxdatabase-sample
+    app.kubernetes.io/part-of: ccx-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ccx-operator
+  name: ccxdatabase-sample
+spec:
+  # TODO(user): Add fields here
